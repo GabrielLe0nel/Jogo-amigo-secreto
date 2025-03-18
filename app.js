@@ -14,7 +14,7 @@ function adicionarAmigo() {
         return;
     }
     
-    listaAmigos.push(nome);
+    listaAmigos.push(nome); //o . push é usado para adicionar nomes à lista de amigos. No geral é utilizado para adicionar um novo elemento ao final de um array.
     atualizarListaAmigos();
     campoNome.value = '';
 }
@@ -26,7 +26,7 @@ function atualizarListaAmigos() {
     listaAmigos.forEach(nome => {
         let li = document.createElement('li');
         li.textContent = nome;
-        lista.appendChild(li);
+        lista.appendChild(li); //utilizado para inserir os <li> (itens da lista) dentro da <ul> (lista não ordenada).
     });
 }
 
@@ -41,7 +41,7 @@ function sortearAmigo() {
             */
     }
     
-    let indiceSorteado = Math.floor(Math.random() * listaAmigos.length);
+    let indiceSorteado = Math.floor(Math.random() * listaAmigos.length); //O Math.floor serve para arredondar o número para baixo, garantindo que seja um índice válido do array.
     let nomeSorteado = listaAmigos[indiceSorteado];
     
     let resultado = document.querySelector('#resultado');
